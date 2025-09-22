@@ -103,7 +103,6 @@ for i, (lambd, ax) in enumerate(zip(lambdas, axes)):
 
 plt.tight_layout()
 plt.show()
-
 # --------------------------
 # 4. 绘制解的轨迹图（不同λ下最优解的变化）
 # --------------------------
