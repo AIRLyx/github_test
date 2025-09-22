@@ -1,6 +1,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import cm
+
+# 设置中文字体，确保中文显示正常
+plt.rcParams["font.family"] = ["SimHei", "WenQuanYi Micro Hei", "Heiti TC"]
+plt.rcParams["axes.unicode_minus"] = False  # 解决负号显示问题
+
 # --------------------------
 # 1. 生成模拟数据
 # --------------------------
@@ -74,6 +79,7 @@ plt.ylabel('w2（x²的系数）', fontsize=12)
 plt.title('似然函数的负对数等高线（观测数据约束）', fontsize=14)
 plt.legend(fontsize=10)
 plt.grid(alpha=0.3)
+plt.tight_layout()  # 自动调整布局，防止标签被截断
 plt.show()
 
 
@@ -107,6 +113,7 @@ plt.ylabel('w2（x²的系数）', fontsize=12)
 plt.title('高斯先验分布的负对数等高线（参数约束）', fontsize=14)
 plt.legend(fontsize=10)
 plt.grid(alpha=0.3)
+plt.tight_layout()  # 自动调整布局，防止标签被截断
 plt.show()
 
 
@@ -142,7 +149,5 @@ plt.ylabel('w2（x²的系数）', fontsize=12)
 plt.title('联合分布的负对数等高线（似然+先验）', fontsize=14)
 plt.legend(fontsize=10)
 plt.grid(alpha=0.3)
+plt.tight_layout()  # 自动调整布局，防止标签被截断
 plt.show()
-
-
-
